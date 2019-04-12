@@ -1,0 +1,103 @@
+.nav-sections-item-content {
+    margin-left : 30px;
+}
+.navigation li.level0 {
+    margin-left: 10px !important;
+}
+.header_custom_icon{
+    float : left;
+    margin-left : 50px;
+}
+.header_custom_icon .group-icon-dafault,.header_custom_icon .group-icon-social{
+    display: inline-block;
+}
+.header_custom_icon .group-icon-social{
+    margin-left : 50px;
+}
+.header_custom_icon .span-icon{
+    display : inline-block;
+}
+.container-custom-category ul.list-title>li{
+    text-decoration: none;
+    list-style: none
+}
+.container-custom-category ul.list-title>li{
+    display : inline-block;
+    border-right : 4px solid #72C0AC
+}
+.container-custom-category ul.list-title>li a{
+    color: #72C0AC;
+    background: transparent;
+    text-transform: uppercase;
+    font-size: 30px;
+    position: relative;
+    border: none;
+    margin: 0;
+    letter-spacing: 0.05em;
+    padding: 0 40px;
+}
+.container-custom-category ul.list-title>li.active a,container-custom-category ul.list-title>li.active a:focus,container-custom-category ul.list-title>li.active a:hover{
+    color: #72C0AC;
+    cursor: default;
+    background-color: #fff;
+    border-right: 3px solid !important;
+    border-bottom-color: transparent;
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    font-weight: bold;
+}
+
+.product-tab-carousel .items {
+    float: left;
+    height: 425px;
+    padding: 20px;
+    width: 25%;
+}
+.product-tab-carousel .items .tabs-image {
+    height: 265px;
+    width: 100%;
+}
+.product-tab-carousel .items .tabs-image img {
+    vertical-align: middle;
+    border: 0;
+    max-width: 100%;
+    height: auto;
+}
+.product-tab-carousel .items .tabs-title>p {
+    font-family: AvenirNextCondensed-Regular;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+}
+.product-tab-carousel .items .product-form {
+    float: left;
+    width: 100%;
+}
+.product-tab-carousel .items .grid-product.color-grey {
+    margin-bottom: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+}
+.product-tab-carousel .items .grid-product.color-grey .product-price {
+    font-weight: bold;
+}
+.product-tab-carousel .items .add-to.cart-section {
+    text-align: center;
+    width: 100%;
+}
+.product-tab-carousel .items button.action_button.add_to_cart {
+    background: #8acdce none repeat scroll 0 0;
+    border: medium none navajowhite;
+    border-radius: 8px;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    width: 165px;
+}

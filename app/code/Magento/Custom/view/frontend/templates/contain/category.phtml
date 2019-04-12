@@ -1,0 +1,80 @@
+<?php
+    $data = $block->getProduct();
+?>
+<div class="custom-category">
+    <ul class="list-title">
+        <li><a href="javascript:void(0)">NEW </a></li>
+        <li><a href="javascript:void(0)">BEST SELLERS </a></li>
+        <li><a href="javascript:void(0)">POPULAR</a></li>
+        <li><a href="javascript:void(0)">PRE-ORDER</a></li>
+        <li><a href="javascript:void(0)">SALE</a></li>
+    </ul>
+</div>
+<div class="tab-content">
+    <div id="NEW" class="tab-pane">
+        <div class="product-tab-carousel">
+            <?php foreach($data as $it){ ?>
+                <div class="items">
+                    <div class="slideshow-item">
+                        <div class="tabs-image">
+                            <a href="/products/aggretsuko-red-panda-sanrio-special-plush-card-case"><img src="//cdn.shopify.com/s/files/1/0003/2820/4319/products/e0f834903824c0996bbfb580c2a94c40_medium.png?v=1524739007" alt=""></a>            
+                        </div>
+                        <div class="tabs-title">
+                            <p><?=$it['name']?></p>
+                        </div>
+                        <form class="product-form" action="/cart/add" data-productid="744630288484" method="post">
+                            <div class="grid-product color-grey">
+                                <span class="product-price" id="price-preview">¥<?=$it['price']?></span>
+                            </div>   	
+                            <div class="add-to cart-section">
+                                <input type="hidden" name="id" data-productid="744630288484" class="product-select" value="8136411578468" data-variant-title="A / Orange">
+                                <button type="submit" value="Add To Cart" class="action_button add_to_cart"><span class="text">Add to Cart</span></button>
+                            </div>
+                        </form>   
+                    </div>  
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+    <!-- <?php foreach(['NEW','BEST SELLERS','POPULAR','PRE-ORDER','SALE'] as $it){ ?>
+        <div id="<?=$it?>" class="tab-pane">
+            <div class="product-tab-carousel">
+                <div class="items">
+                    <div class="slideshow-item">
+                        <div class="tabs-image">
+                            <a href="/products/aggretsuko-red-panda-sanrio-special-plush-card-case"><img src="//cdn.shopify.com/s/files/1/0003/2820/4319/products/e0f834903824c0996bbfb580c2a94c40_medium.png?v=1524739007" alt=""></a>            
+                        </div>
+                        <div class="tabs-title">
+                            <p>Aggretsuko Red Panda Sanrio...</p>
+                        </div>
+                        <form class="product-form" action="/cart/add" data-productid="744630288484" method="post">
+                            <div class="grid-product color-grey">
+                                <span class="product-price" id="price-preview">¥20</span>
+                            </div>   	
+                            <div class="add-to cart-section">
+                                <input type="hidden" name="id" data-productid="744630288484" class="product-select" value="8136411578468" data-variant-title="A / Orange">
+                                <button type="submit" value="Add To Cart" class="action_button add_to_cart"><span class="text">Add to Cart</span></button>
+                            </div>
+                        </form>   
+                    </div>  
+                </div>
+            </div>
+        </div>
+    <?php } ?> -->
+</div>
+<script>
+    window.checkout = <?php /* @escapeNotVerified */ echo \Zend_Json::encode($block->getConfig()); ?>;
+</script>
+<!-- 
+<div id="ajaxresponse"></div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "js/customjs": {
+                "ajaxUrl": "<?php echo $this->getUrl('custom/index/Testajax') ?>",
+                "currentUrl": "<?php echo $this->getUrl() ?>",
+                "jsonData": {"test" : 1}
+            }
+        }
+    }
+</script> -->
