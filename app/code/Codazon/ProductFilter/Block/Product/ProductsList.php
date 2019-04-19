@@ -129,7 +129,6 @@ class ProductsList extends \Magento\CatalogWidget\Block\Product\ProductsList
     {
         $collection = $this->productCollectionFactory->create();
         $collection->setVisibility($this->catalogProductVisibility->getVisibleInCatalogIds());
-
         $collection = $this->_addProductAttributesAndPrices($collection)
             ->addStoreFilter()
             ->setPageSize($this->getPageSize())

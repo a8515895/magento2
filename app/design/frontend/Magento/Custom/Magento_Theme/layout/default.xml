@@ -35,7 +35,7 @@
 		<!--MOVE COMPARE - WISHLIST-->
 		<move element="catalog.compare.link" destination="header.links" before="authorization-link-login" />
 		<move element="wish-list-link" destination="header.links" before="catalog.compare.link" />
-		<referenceContainer name="compare-link-wrapper" remove="true" />
+		<referenceContainer name="compare-link-wrapper" />
 		
 		<!--END MOVE COMPARE - WISHLIST-->
 		
@@ -102,15 +102,16 @@
 			</referenceContainer>
 		</referenceContainer>
         <referenceContainer name="footer-container">
-            <container name="footer.container.top" before="-" htmlTag="div" htmlId="topfooter" htmlClass="top-footer-wrapper" label="Footer Container Top Full">
-				 <container name="footer.content.top" htmlTag="div" htmlClass="footer content footer-content-top" label="Footer Container Top" after="-"/>
-			</container>
-			<container name="footer.container.wrapper" label="Footer Container Wrapper" after="footer.container.top" htmlTag="div" htmlClass="footer content footer-container-wrapper" />
-            <container name="footer.container.bottom" label="Footer Container Bottom" after="footer.container.wrapper" htmlTag="div" htmlId="bottomfooter" htmlClass="bottom-footer-wrapper">
-                <container name="footer.content.bottom" htmlTag="div" htmlClass="footer content" >
-                    <container name="footer.custom.block" htmlTag="div" htmlClass="footer-custom-block" label="Footer Custom Block" after="copyright" />
-                </container>
-            </container>
+            <referenceContainer   name="footer.container.top" before="-" htmlTag="div" htmlId="topfooter" htmlClass="top-footer-wrapper" label="Footer Container Top Full">
+				 <referenceContainer name="footer.content.top" htmlTag="div" htmlClass="footer content footer-content-top" label="Footer Container Top" after="-"/>
+			</referenceContainer>
+			<referenceContainer  name="footer.container.wrapper" label="Footer Container Wrapper" after="footer.container.top" htmlTag="div" htmlClass="footer content footer-container-wrapper" />
+            <referenceContainer name="footer.container.bottom" label="Footer Container Bottom" after="footer.container.wrapper" htmlTag="div" htmlId="bottomfooter" htmlClass="bottom-footer-wrapper">
+                <block class="Magento\Framework\View\Element\Template" name="footer" template="Magento_Theme::html/footer.phtml"/>
+				<referenceContainer remove="true" name="footer.content.bottom" htmlTag="div" htmlClass="footer content" >
+                    <referenceContainer name="footer.custom.block" htmlTag="div" htmlClass="footer-custom-block" label="Footer Custom Block" after="copyright" />
+                </referenceContainer>
+            </referenceContainer>
         </referenceContainer>
         <referenceBlock name="footer_links" display="false" />
         <move element="footer" destination="footer.container.top" before="-" />
@@ -130,6 +131,9 @@
 			</container>
 		</block>
         </referenceContainer>
+		<referenceContainer name="after.body.start">
+			<block class="Magento\Framework\View\Element\Template" name="customjs.js" template="Magento_Theme::customjs.phtml"/>
+		</referenceContainer>
 		
     </body>
 </page>

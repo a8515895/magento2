@@ -1,6 +1,6 @@
-    <!-- <script>
-        var window.checkout = <?php /* @escapeNotVerified */ echo \Zend_Json::encode($block->getConfig()); ?>;
-    </script> -->
+    <script defer>
+        window['checkout'] = <?php /* @escapeNotVerified */ echo \Zend_Json::encode($block->getConfig()); ?>;
+    </script>
     <script type="text/x-magento-init">
     {
         "[data-block='minicart']": {

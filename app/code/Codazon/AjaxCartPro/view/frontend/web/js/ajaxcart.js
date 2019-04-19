@@ -14,7 +14,6 @@ define([
 	var sidebarCart = $('[data-block="footer_minicart"]');
 	var addToCartCalls = 0;
 	var sidebarInitialized = false;
-	console.log(window.checkout)
 	function initSidebar() {
 		if (sidebarCart.data('mageSidebar')) {
 			sidebarCart.codazonSidebar('update');

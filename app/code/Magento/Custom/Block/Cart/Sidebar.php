@@ -1,5 +1,9 @@
 <?php
-namespace Magento\Custom\Block\Cart;
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+namespace Magento\Checkout\Block\Cart;
 
 use Magento\Store\Model\ScopeInterface;
 
